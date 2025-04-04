@@ -21,12 +21,12 @@ Con gráficos evolutivos y metas personalizadas, FitNote te motiva a mantener un
 ### Autenticación con Google
 
 
-### Registro de datos semanales
+### Registro de datos
 <p align="center">
   <img src="imagenproyecto.jpeg" width="300">
 </p>
 
-### Gráficos evolutivos
+### Gráficos evolutivos y registro de avances
 <p align="center">
   <img src="imagenproyecto1.jpeg" width="300">
 </p>
