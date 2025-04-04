@@ -37,24 +37,3 @@ Build de desarrollo
 Emulador de Android o iOS
 
 Visualización en Expo Go
-
-🧠 Aprende más
-Documentación de Expo
-
-Guía para desarrollo con router basado en archivos
-
-Tutorial paso a paso
-
-🛠 ¿Necesitas empezar desde cero?
-Puedes limpiar el proyecto base con:
-
-bash
-Copiar
-Editar
-npm run reset-project
-Esto moverá el código de ejemplo a app-example/ y te dejará el directorio app/ listo para desarrollo.
-
-🤝 Comunidad
-Expo en GitHub
-
-Comunidad en Discord
