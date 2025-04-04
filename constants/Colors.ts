@@ -24,3 +24,14 @@ export const Colors = {
     tabIconSelected: tintColorDark,
   },
 };
+// constants/colors.ts
+export const colors = {
+  primary: '#4b6cb7',
+  secondary: '#182848',
+  white: '#ffffff',
+  gray: '#a0aec0',
+  lightGray: '#e2e8f0',
+  darkGray: '#4a5568',
+  green: '#27ae60', // Aquí añadimos el color verde
+
+};

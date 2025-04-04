@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "proyectofinal",
+    "name": "FitNote",
     "slug": "proyectofinal",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/fitnote.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.andresigs.proyectofinal"
     },
     "web": {
       "bundler": "metro",
@@ -32,10 +33,19 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "86a6ffd0-1cc7-4aad-b717-138d95d23cf0"
+      }
     }
   }
 }
