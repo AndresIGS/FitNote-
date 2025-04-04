@@ -19,6 +19,9 @@ Con gráficos evolutivos y metas personalizadas, FitNote te motiva a mantener un
 - Base de datos conectada con **Supabase**
 ## 🎞️ Imagenes del proyecto
 ### Autenticación con Google
+<p align="center">
+  <img src="imagenproyecto2.jpeg" width="300">
+</p>
 
 
 ### Registro de datos
