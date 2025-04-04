@@ -40,9 +40,6 @@ const RegistrarProgreso = () => {
       console.log('Progreso registrado correctamente');
     }
   };
-  
-  
-  
 
   return (
     <View style={styles.container}>
@@ -72,35 +69,51 @@ const RegistrarProgreso = () => {
         onChangeText={setIMC}
       />
 
-<Button
-  title="Registrar"
-  onPress={() => {
-    registrarProgreso(
-      parseFloat(peso), 
-      parseFloat(masaMuscular), 
-      parseFloat(imc), 
-      170,  // Altura (deberías obtenerla dinámicamente)
-      25,   // Edad (deberías obtenerla dinámicamente)
-      70,   // Meta de peso (deberías obtenerla dinámicamente)
-      30,   // Meta de masa muscular (deberías obtenerla dinámicamente)
-      12    // Tiempo meta (deberías obtenerlo dinámicamente)
-    );
-  }}
-/>
+      <Button
+        title="Registrar"
+        color="#4CAF50"
+        onPress={() => {
+          registrarProgreso(
+            parseFloat(peso),
+            parseFloat(masaMuscular),
+            parseFloat(imc),
+            170,  // Altura (deberías obtenerla dinámicamente)
+            25,   // Edad (deberías obtenerla dinámicamente)
+            70,   // Meta de peso (deberías obtenerla dinámicamente)
+            30,   // Meta de masa muscular (deberías obtenerla dinámicamente)
+            12    // Tiempo meta (deberías obtenerlo dinámicamente)
+          );
+        }}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20, justifyContent: 'center' },
-  title: { fontSize: 22, fontWeight: 'bold', marginBottom: 20, textAlign: 'center' },
+  container: {
+    flex: 1,
+    padding: 20,
+    justifyContent: 'center',
+    backgroundColor: '#f4f4f4',
+  },
+  title: {
+    fontSize: 26,
+    fontWeight: '600',
+    color: '#333',
+    marginBottom: 30,
+    textAlign: 'center',
+  },
   input: {
+    backgroundColor: '#fff',
     borderWidth: 1,
-    borderColor: '#ccc',
-    padding: 10,
-    marginBottom: 15,
-    borderRadius: 5
-  }
+    borderColor: '#ddd',
+    borderRadius: 10,
+    paddingHorizontal: 15,
+    paddingVertical: 12,
+    marginBottom: 20,
+    fontSize: 16,
+    color: '#333',
+  },
 });
 
 export default RegistrarProgreso;

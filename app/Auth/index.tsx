@@ -1,14 +1,10 @@
 import { Button, Input } from '@rneui/themed';
 import React, { useState } from 'react';
-import { Alert, StyleSheet, View, AppState } from 'react-native';
+import { Alert, StyleSheet, View, AppState, Text } from 'react-native';
 import { Redirect } from 'expo-router';
 
 import { supabase } from '@/lib/supabase';
 
-// Tells Supabase Auth to continuously refresh the session automatically if
-// the app is in the foreground. When this is added, you will continue to receive
-// `onAuthStateChange` events with the `TOKEN_REFRESHED` or `SIGNED_OUT` event
-// if the user's session is terminated. This should only be registered once.
 AppState.addEventListener('change', (state) => {
   if (state === 'active') {
     supabase.auth.startAutoRefresh();
@@ -50,10 +46,13 @@ export default function Auth() {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>🏋️ FitNote Access</Text>
       <View style={[styles.verticallySpaced, styles.mt20]}>
         <Input
+          inputStyle={styles.inputText}
           label="Email"
-          leftIcon={{ type: 'font-awesome', name: 'envelope' }}
+          labelStyle={styles.label}
+          leftIcon={{ type: 'font-awesome', name: 'envelope', color: '#4CAF50' }}
           onChangeText={(text) => setEmail(text)}
           value={email}
           placeholder="email@address.com"
@@ -62,8 +61,10 @@ export default function Auth() {
       </View>
       <View style={styles.verticallySpaced}>
         <Input
+          inputStyle={styles.inputText}
           label="Password"
-          leftIcon={{ type: 'font-awesome', name: 'lock' }}
+          labelStyle={styles.label}
+          leftIcon={{ type: 'font-awesome', name: 'lock', color: '#4CAF50' }}
           onChangeText={(text) => setPassword(text)}
           value={password}
           secureTextEntry
@@ -72,10 +73,20 @@ export default function Auth() {
         />
       </View>
       <View style={[styles.verticallySpaced, styles.mt20]}>
-        <Button title="Sign in" disabled={loading} onPress={() => signInWithEmail()} />
+        <Button
+          title="🚀 Iniciar sesión"
+          buttonStyle={styles.button}
+          disabled={loading}
+          onPress={() => signInWithEmail()}
+        />
       </View>
       <View style={styles.verticallySpaced}>
-        <Button title="Sign up" disabled={loading} onPress={() => signUpWithEmail()} />
+        <Button
+          title="🆕 Crear cuenta"
+          buttonStyle={[styles.button, styles.secondaryButton]}
+          disabled={loading}
+          onPress={() => signUpWithEmail()}
+        />
       </View>
     </View>
   );
@@ -84,14 +95,39 @@ export default function Auth() {
 const styles = StyleSheet.create({
   container: {
     marginTop: 40,
-    padding: 12,
+    padding: 20,
+    backgroundColor: '#f0f4f7',
+    flex: 1,
+  },
+  title: {
+    fontSize: 26,
+    fontWeight: 'bold',
+    color: '#2e7d32',
+    textAlign: 'center',
+    marginBottom: 20,
   },
   verticallySpaced: {
-    paddingTop: 4,
-    paddingBottom: 4,
+    paddingTop: 8,
+    paddingBottom: 8,
     alignSelf: 'stretch',
   },
   mt20: {
     marginTop: 20,
+  },
+  label: {
+    fontWeight: 'bold',
+    color: '#1b5e20',
+  },
+  inputText: {
+    paddingLeft: 10,
+    color: '#333',
+  },
+  button: {
+    backgroundColor: '#43a047',
+    paddingVertical: 12,
+    borderRadius: 12,
+  },
+  secondaryButton: {
+    backgroundColor: '#66bb6a',
   },
 });

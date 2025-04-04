@@ -75,12 +75,13 @@ const Metas = () => {
       console.log('Meta guardada:', data);
     }
   };
+
   // Datos para renderizar en el FlatList
   const formSections = [
     {
       key: 'header',
       render: () => (
-        <LinearGradient colors={['#4b6cb7', '#182848']} style={styles.header}>
+        <LinearGradient colors={['#34d399', '#059669']} style={styles.header}>
           <Text style={styles.title}>Establece Tus Metas</Text>
           <Text style={styles.subtitle}>Comienza tu transformación de forma saludable</Text>
         </LinearGradient>
@@ -134,7 +135,8 @@ const Metas = () => {
               selectedValue={sexo}
               onValueChange={(itemValue) => setSexo(itemValue)}
               style={styles.picker}
-              dropdownIconColor="#4b6cb7"
+              dropdownIconColor="#34d399"
+              
             >
               <Picker.Item label="Hombre" value="1" />
               <Picker.Item label="Mujer" value="0" />
@@ -177,7 +179,6 @@ const Metas = () => {
         ) : null
       )
     },
-    
     {
       key: 'goalsTitle',
       render: () => (
@@ -226,7 +227,7 @@ const Metas = () => {
               selectedValue={tiempoMeta}
               onValueChange={(itemValue) => setTiempoMeta(itemValue)}
               style={styles.picker}
-              dropdownIconColor="#4b6cb7"
+              dropdownIconColor="#34d399"
             >
               <Picker.Item label="1 mes" value="1" />
               <Picker.Item label="3 meses" value="3" />
@@ -262,208 +263,107 @@ const Metas = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f7fa',
+    backgroundColor: '#f0f4f8',
   },
   contentContainer: {
     paddingBottom: 40,
   },
   header: {
-    padding: 30,
-    paddingTop: 50,
+    padding: 32,
     alignItems: 'center',
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
-    marginBottom: 20,
+    justifyContent: 'center',
+    borderBottomLeftRadius: 16,
+    borderBottomRightRadius: 16,
   },
   title: {
-    fontSize: 26,
-    fontWeight: '600',
-    color: 'white',
-    marginBottom: 8,
-    textAlign: 'center',
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#fff',
   },
   subtitle: {
-    fontSize: 15,
-    color: 'rgba(255,255,255,0.85)',
-    textAlign: 'center',
+    fontSize: 16,
+    color: '#fff',
+    marginTop: 8,
   },
   sectionTitle: {
-    fontSize: 19,
-    fontWeight: '600',
-    color: '#2d3748',
-    paddingBottom: 8,
-    borderBottomWidth: 1,
-    borderBottomColor: '#e2e8f0',
-  },
-  sectionTitlePadding: {
-    marginHorizontal: 20,
-    marginBottom: 20,
-  },
-  inputContainer: {
-    marginBottom: 18,
-    marginHorizontal: 20,
-  },
-  labelContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 8,
-  },
-  label: {
-    fontSize: 15,
-    fontWeight: '500',
-    color: '#4a5568',
-  },
-  input: {
-    height: 48,
-    borderColor: '#e2e8f0',
-    borderWidth: 1,
-    borderRadius: 8,
-    paddingHorizontal: 14,
-    backgroundColor: 'white',
-    fontSize: 15,
-    color: '#2d3748',
-  },
-  pickerContainer: {
-    borderWidth: 1,
-    borderColor: '#e2e8f0',
-    borderRadius: 8,
-    backgroundColor: 'white',
-    overflow: 'hidden',
-  },
-  picker: {
-    height: 48,
-    width: '100%',
-    color: '#2d3748',
-  },
-  imcContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: 10,
-    marginHorizontal: 20,
-  },
-  imcText: {
-    fontSize: 16,
-    fontWeight: '500',
-    color: '#4b6cb7',
-    marginRight: 10,
-  },
-  imcCategory: {
-    fontSize: 15,
-    color: '#718096',
-  },
-  button: {
-    backgroundColor: '#4b6cb7',
-    padding: 14,
-    borderRadius: 8,
-    alignItems: 'center',
-    marginTop: 25,
-    marginHorizontal: 20,
-  },
-  buttonText: {
-    color: 'white',
-    fontSize: 16,
-    fontWeight: '500',
-  },
-  infoButton: {
-    padding: 4,
-  },
-  infoButtonText: {
-    color: '#4b6cb7',
-    fontSize: 13,
-    fontWeight: '500',
-    textDecorationLine: 'underline',
-  },
-  calculoText: {
-    fontSize: 16,
-    fontWeight: '500',
-    color: '#4b6cb7',
-    marginRight: 10,
-  },
-  infoContainer: {
-    backgroundColor: 'white',
-    borderRadius: 10,
-    margin: 20,
-    padding: 16,
-    borderWidth: 1,
-    borderColor: '#e2e8f0',
-  },
-  infoScroll: {
-    maxHeight: 300,
-  },
-  infoTitle: {
     fontSize: 18,
     fontWeight: '600',
     color: '#2d3748',
-    marginBottom: 12,
+    marginTop: 16,
   },
-  infoSubtitle: {
-    fontSize: 16,
-    fontWeight: '600',
+  sectionTitlePadding: {
+    paddingHorizontal: 16,
+  },
+  inputContainer: {
+    marginBottom: 12,
+    paddingHorizontal: 16,
+  },
+  label: {
+    fontSize: 12,
     color: '#4a5568',
-    marginTop: 12,
     marginBottom: 6,
   },
-  infoText: {
-    fontSize: 14,
-    color: '#4a5568',
-    marginBottom: 8,
-    lineHeight: 20,
+  input: {
+    height: 45,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    borderRadius: 8,
+    paddingLeft: 12,
+    fontSize: 16,
+    backgroundColor: '#fff',
   },
-  infoFormula: {
-    fontSize: 14,
-    color: '#2d3748',
-    backgroundColor: '#f8f9fa',
-    padding: 10,
-    borderRadius: 6,
-    marginVertical: 8,
-    fontFamily: 'monospace',
+  pickerContainer: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 8,
+    overflow: 'hidden',
   },
-  closeButton: {
-    marginTop: 12,
-    padding: 10,
-    backgroundColor: '#e2e8f0',
-    borderRadius: 6,
-    alignItems: 'center',
-  },
-  closeButtonText: {
-    color: '#4a5568',
-    fontWeight: '500',
+  picker: {
+    height: 50,
+    backgroundColor: '#fff',
   },
   metricContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    marginVertical: 10,
-    marginHorizontal: 20,
-    backgroundColor: 'white',
-    padding: 15,
-    borderRadius: 10,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+    marginTop: 16,
   },
   metricBox: {
+    backgroundColor: '#fff',
+    padding: 16,
+    borderRadius: 8,
+    width: '48%',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   metricLabel: {
     fontSize: 14,
-    fontWeight: '500',
-    color: '#4b6cb7',
+    color: '#4a5568',
   },
   metricValue: {
     fontSize: 18,
-    fontWeight: '700',
-    color: '#2d3748',
-    marginTop: 4,
+    fontWeight: 'bold',
+    color: '#34d399',
+    marginTop: 6,
   },
   metricCategory: {
-    fontSize: 14,
+    fontSize: 12,
     color: '#718096',
-    marginTop: 2,
+    marginTop: 4,
   },
-  
+  button: {
+    backgroundColor: '#34d399',
+    paddingVertical: 14,
+    borderRadius: 8,
+    marginHorizontal: 16,
+    marginTop: 24,
+  },
+  buttonText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#fff',
+    textAlign: 'center',
+  }
 });
 
 export default Metas;
