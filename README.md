@@ -1,50 +1,60 @@
-# Welcome to your Expo app 👋
+# FitNote – Monitor de Progreso Físico y Corporal 💪📈
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+FitNote es una app desarrollada con **React Native** y **Expo** para llevar un registro personalizado de tu progreso físico y corporal. Permite guardar y visualizar de manera semanal datos clave como:
 
-## Get started
+- Peso corporal
+- Altura
+- IMC (Índice de Masa Corporal)
+- Masa muscular
 
-1. Install dependencies
+Con gráficos evolutivos y metas personalizadas, FitNote te motiva a mantener un seguimiento realista y visual de tu avance en el tiempo.
+
+## ✨ Funcionalidades
+
+- Registro de datos corporales semanales
+- Cálculo automático de IMC
+- Visualización gráfica del progreso
+- Comparación con metas establecidas
+- Autenticación con cuenta de Google
+- Base de datos conectada con **Supabase**
+
+## 🚀 Cómo iniciar el proyecto
+
+1. Instala las dependencias:
 
    ```bash
    npm install
-   ```
+Inicia la app en modo desarrollo:
 
-2. Start the app
+bash
+Copiar
+Editar
+npx expo start
+Se abrirá una interfaz con opciones para:
 
-   ```bash
-    npx expo start
-   ```
+Build de desarrollo
 
-In the output, you'll find options to open the app in a
+Emulador de Android o iOS
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Visualización en Expo Go
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+🧠 Aprende más
+Documentación de Expo
 
-## Get a fresh project
+Guía para desarrollo con router basado en archivos
 
-When you're ready, run:
+Tutorial paso a paso
 
-```bash
+🛠 ¿Necesitas empezar desde cero?
+Puedes limpiar el proyecto base con:
+
+bash
+Copiar
+Editar
 npm run reset-project
-```
+Esto moverá el código de ejemplo a app-example/ y te dejará el directorio app/ listo para desarrollo.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+🤝 Comunidad
+Expo en GitHub
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Comunidad en Discord
